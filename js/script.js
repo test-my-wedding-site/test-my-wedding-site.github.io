@@ -62,3 +62,32 @@ window.addEventListener("scroll", () => {
   }
 
 });
+
+
+/* MAP */
+const buttons = document.querySelectorAll(".map-btn");
+
+const ceremonyMap = document.getElementById("ceremony-map");
+const receptionMap = document.getElementById("reception-map");
+
+buttons.forEach(btn => {
+  btn.addEventListener("click", () => {
+
+    const type = btn.dataset.map;
+
+    // update active button
+    buttons.forEach(b => b.classList.remove("active"));
+    btn.classList.add("active");
+
+    // swap full map wrappers
+    ceremonyMap.classList.remove("active-map");
+    receptionMap.classList.remove("active-map");
+
+    if(type === "ceremony") {
+      ceremonyMap.classList.add("active-map");
+    } else {
+      receptionMap.classList.add("active-map");
+    }
+
+  });
+});

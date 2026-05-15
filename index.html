@@ -66,14 +66,6 @@
         June 21, 2026
       </p>
 
-      <div class="hero-info-strip">
-
-        <div>June 21, 2026</div>
-        <div>2:00 PM</div>
-        <div>Sunset Garden Hall</div>
-
-      </div>
-
       <div class="countdown">
 
         <div class="time-box">
@@ -337,51 +329,68 @@
 </section>
 
   <!-- Location -->
-  <section id="location" class="section location-section">
+  <!-- Location -->
+<section id="location" class="section location-section">
 
-    <div class="container">
+  <div class="container">
 
-      <div class="section-title">
+    <div class="section-title">
+      <p>Wedding Venue</p>
+      <h2>Location</h2>
+    </div>
 
-        <p>Wedding Venue</p>
-        <h2>Location</h2>
+    <!-- TOGGLE BUTTONS -->
+    <div class="map-toggle">
 
-      </div>
+      <button class="map-btn active" data-map="ceremony">
+        Ceremony
+      </button>
 
-      <div class="map-wrapper">
+      <button class="map-btn" data-map="reception">
+        Reception
+      </button>
 
-        <iframe
-          src="https://www.google.com/maps?q=6.116338,125.171833&z=16&output=embed"
-          loading="lazy"
-          allowfullscreen>
-        </iframe>
+    </div>
 
-        <div class="qr-overlay">
+    <!-- CEREMONY MAP WRAPPER -->
+    <div id="ceremony-map" class="map-wrapper active-map">
 
-          <img
-            src="https://api.qrserver.com/v1/create-qr-code/?size=120x120&data=https://www.google.com/maps?q=6.116338,125.171833"
-            alt="QR Code"
-          >
+      <iframe
+        src="https://www.google.com/maps?q=6.116338,125.171833&z=16&output=embed"
+        loading="lazy"
+        allowfullscreen>
+      </iframe>
 
-        </div>
-
-      </div>
-
-      <div class="map-actions">
-
-        <a
-          href="https://www.google.com/maps?q=6.116338,125.171833"
-          target="_blank"
-          class="btn"
+      <div class="qr-overlay">
+        <img
+          src="https://api.qrserver.com/v1/create-qr-code/?size=120x120&data=https://www.google.com/maps?q=6.116338,125.171833"
+          alt="Ceremony QR Code"
         >
-          Open in Google Maps
-        </a>
-
       </div>
 
     </div>
 
-  </section>
+    <!-- RECEPTION MAP WRAPPER -->
+    <div id="reception-map" class="map-wrapper">
+
+      <iframe
+        src="https://www.google.com/maps?q=6.116338,125.171833&z=16&output=embed"
+        loading="lazy"
+        allowfullscreen>
+      </iframe>
+
+      <div class="qr-overlay">
+        <img
+          src="https://api.qrserver.com/v1/create-qr-code/?size=120x120&data=https://www.google.com/maps?q=6.116338,125.171833"
+          alt="Reception QR Code"
+        >
+      </div>
+
+    </div>
+
+  </div>
+
+</section>
 
   <!-- Schedule -->
   <section id="schedule" class="section">
