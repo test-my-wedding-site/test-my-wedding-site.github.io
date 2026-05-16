@@ -61,7 +61,7 @@ document.addEventListener("DOMContentLoaded", async () => {
         scrollTrigger: {
             trigger: ".footer-hero",
             start: "top 50%",
-            toggleActions: "play none none none"
+            toggleActions: "play none none reverse"
         }
     })
     .from(".footer-signature", {
@@ -73,7 +73,7 @@ document.addEventListener("DOMContentLoaded", async () => {
     .from(".footer-names", {
         opacity: 0,
         y: 30,
-        duration: 1,
+        duration: 0.8,
         ease: "power3.out"
     }, "-=0.4")
     .from(".footer-date", {
