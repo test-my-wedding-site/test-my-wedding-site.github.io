@@ -1,104 +1,134 @@
-/* MOBILE MENU */
-const toggle = document.getElementById("menu-toggle");
-const nav = document.getElementById("nav-links");
+const getDate = async() => {
+  try{
+    const res = await fetch(
+      "https://timeapi.io/api/Time/current/zone?timeZone=Asia/Manila"
+    );
 
-toggle.addEventListener("click", () => {
-  nav.classList.toggle("active");
-});
-
-/* CLOSE MENU ON LINK CLICK */
-document.querySelectorAll(".nav-links a").forEach(link => {
-
-  link.addEventListener("click", () => {
-    nav.classList.remove("active");
-  });
-
-});
-
-/* COUNTDOWN TIMER */
-const weddingDate = new Date("May 16, 2026 00:00:00").getTime();
-const countdownEl = document.querySelector(".countdown");
-const finishedEl = document.querySelector(".countdown-finished");
-
-function updateCountdown() {
-
-  const now = Date.now();
-  const gap = weddingDate - now;
-
-  if (gap <= 0) {
-    countdownEl.classList.add("hidden");
-    finishedEl.classList.remove("hidden");
-    return;
+    if(!res.ok) return null;
+    const data = await res.json();
+    return data.dateTime.slice(0, 23);
   }
-
-  countdownEl.classList.remove("hidden");
-  finishedEl.classList.add("hidden");
-
-  const second = 1000;
-  const minute = second * 60;
-  const hour = minute * 60;
-  const day = hour * 24;
-
-  const days = Math.floor(gap / day);
-  const hours = Math.floor((gap % day) / hour);
-  const minutes = Math.floor((gap % hour) / minute);
-  const seconds = Math.floor((gap % minute) / second);
-
-  document.getElementById("days").innerText = days;
-  document.getElementById("hours").innerText = hours;
-  document.getElementById("minutes").innerText = minutes;
-  document.getElementById("seconds").innerText = seconds;
-
+  catch(error){ return null; }
 }
 
-setInterval(updateCountdown, 1000);
+const getTimeOffset = async() => {
+  const apiDate = await getDate();
+  if(!apiDate) return 0;
+  return new Date(apiDate).getTime() - Date.now();
+}
 
-updateCountdown();
 
-/* NAVBAR SCROLL EFFECT */
-window.addEventListener("scroll", () => {
+/* Run on DOMContentLoaded*/
+document.addEventListener("DOMContentLoaded", async() => {
 
-  const navbar = document.querySelector(".navbar");
+  /* MOBILE MENU */
+  const toggle = document.getElementById("menu-toggle");
+  const nav = document.getElementById("nav-links");
 
-  if (window.scrollY > 50) {
+  toggle.addEventListener("click", () => {
+    nav.classList.toggle("active");
+  });
 
-    navbar.style.background = "rgba(247,248,246,0.96)";
-    navbar.style.boxShadow = "0 4px 20px rgba(0,0,0,0.05)";
+  /* CLOSE MENU ON LINK CLICK */
+  document.querySelectorAll(".nav-links a").forEach(link => {
 
-  } else {
+    link.addEventListener("click", () => {
+      nav.classList.remove("active");
+    });
 
-    navbar.style.background = "rgba(247,248,246,0.90)";
-    navbar.style.boxShadow = "none";
+  });
+
+  /* COUNTDOWN TIMER */
+  const weddingDate = new Date("May 16, 2026 17:12:00").getTime();
+  const timeOffset = await getTimeOffset();
+  const countdownEl = document.querySelector(".countdown");
+  const finishedEl = document.querySelector(".countdown-finished");
+
+  function updateCountdown() {
+
+    const now = new Date(Date.now() + timeOffset);
+    const gap = weddingDate - now;
+
+    if (gap <= 0) {
+      countdownEl.classList.add("hidden");
+      finishedEl.classList.remove("hidden");
+      return;
+    }
+
+    countdownEl.classList.remove("hidden");
+    finishedEl.classList.add("hidden");
+
+    const second = 1000;
+    const minute = second * 60;
+    const hour = minute * 60;
+    const day = hour * 24;
+
+    const days = Math.floor(gap / day);
+    const hours = Math.floor((gap % day) / hour);
+    const minutes = Math.floor((gap % hour) / minute);
+    const seconds = Math.floor((gap % minute) / second);
+
+    document.getElementById("days").innerText = days;
+    document.getElementById("hours").innerText = hours;
+    document.getElementById("minutes").innerText = minutes;
+    document.getElementById("seconds").innerText = seconds;
 
   }
 
-});
+  setInterval(updateCountdown, 1000);
 
+  updateCountdown();
 
-/* MAP */
-const buttons = document.querySelectorAll(".map-btn");
+  /* NAVBAR SCROLL EFFECT */
+  window.addEventListener("scroll", () => {
 
-const ceremonyMap = document.getElementById("ceremony-map");
-const receptionMap = document.getElementById("reception-map");
+    const navbar = document.querySelector(".navbar");
 
-buttons.forEach(btn => {
-  btn.addEventListener("click", () => {
+    if (window.scrollY > 50) {
 
-    const type = btn.dataset.map;
+      navbar.style.background = "rgba(247,248,246,0.96)";
+      navbar.style.boxShadow = "0 4px 20px rgba(0,0,0,0.05)";
 
-    // update active button
-    buttons.forEach(b => b.classList.remove("active"));
-    btn.classList.add("active");
-
-    // swap full map wrappers
-    ceremonyMap.classList.remove("active-map");
-    receptionMap.classList.remove("active-map");
-
-    if (type === "ceremony") {
-      ceremonyMap.classList.add("active-map");
     } else {
-      receptionMap.classList.add("active-map");
+
+      navbar.style.background = "rgba(247,248,246,0.90)";
+      navbar.style.boxShadow = "none";
+
     }
 
   });
+
+
+  /* MAP */
+  const buttons = document.querySelectorAll(".map-btn");
+
+  const ceremonyMap = document.getElementById("ceremony-map");
+  const receptionMap = document.getElementById("reception-map");
+
+  buttons.forEach(btn => {
+    btn.addEventListener("click", () => {
+
+      const type = btn.dataset.map;
+
+      // update active button
+      buttons.forEach(b => b.classList.remove("active"));
+      btn.classList.add("active");
+
+      // swap full map wrappers
+      ceremonyMap.classList.remove("active-map");
+      receptionMap.classList.remove("active-map");
+
+      if (type === "ceremony") {
+        ceremonyMap.classList.add("active-map");
+      } else {
+        receptionMap.classList.add("active-map");
+      }
+
+    });
+  });
 });
+
+
+
+
+
