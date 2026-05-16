@@ -3,7 +3,7 @@ document.addEventListener("DOMContentLoaded", async () => {
     gsap.registerPlugin(ScrollTrigger);
 
     // GLOBAL REVEAL ANIMATION
-    gsap.utils.toArray(".section, .details-card, .faq-card, .entourage-card, .img-box, .reminder-box, .gallery-social, .details-intro, .map-toggle, .map-wrapper, .timeline-item, .featured-card, .rsvp-box, .rsvp-note, .sponsor-item, .party-column, .group-heading, .entourage-card, .spotify-intro, .spotify-card, .story-wrapper")
+    gsap.utils.toArray(".section, .details-card, .faq-card, .entourage-card, .img-box, .reminder-box, .gallery-social, .details-intro, .map-toggle, .map-content, .timeline-item, .featured-card, .rsvp-box, .rsvp-note, .sponsor-item, .party-column, .group-heading, .entourage-card, .spotify-intro, .spotify-card, .story-wrapper")
         .forEach((el) => {
             gsap.fromTo(
                 el,
@@ -43,7 +43,13 @@ document.addEventListener("DOMContentLoaded", async () => {
     });
 
     // Hero Entrance Animation
-    gsap.timeline()
+    gsap.timeline({
+        scrollTrigger: {
+            trigger: ".hero",
+            start: "top 85%",
+            toggleActions: "play none none reverse"
+        }
+    })
         .from(".hero-subtitle", { opacity: 0, y: 20, duration: 0.8 })
         .from(".hero h2", { opacity: 0, y: 20, duration: 0.8 }, "-=0.4")
         .from(".hero h1", { opacity: 0, y: 40, duration: 1 })
@@ -73,7 +79,7 @@ document.addEventListener("DOMContentLoaded", async () => {
     .from(".footer-names", {
         opacity: 0,
         y: 30,
-        duration: 0.8,
+        duration: 1,
         ease: "power3.out"
     }, "-=0.4")
     .from(".footer-date", {
