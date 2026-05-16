@@ -83,7 +83,7 @@ buttons.forEach(btn => {
     ceremonyMap.classList.remove("active-map");
     receptionMap.classList.remove("active-map");
 
-    if(type === "ceremony") {
+    if (type === "ceremony") {
       ceremonyMap.classList.add("active-map");
     } else {
       receptionMap.classList.add("active-map");
