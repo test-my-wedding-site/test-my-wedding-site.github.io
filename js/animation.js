@@ -21,7 +21,7 @@ const initAnimation = () => {
                     scrollTrigger: {
                         trigger: el,
                         start: "top 80%",
-                        toggleActions: "play none none reverse"
+                        toggleActions: "play none none none"
                     }
                 }
             );
@@ -38,7 +38,7 @@ const initAnimation = () => {
             scrollTrigger: {
                 trigger: title,
                 start: "top 80%",
-                toggleActions: "play none none reverse"
+                toggleActions: "play none none none"
             }
         });
     });
@@ -48,7 +48,7 @@ const initAnimation = () => {
         scrollTrigger: {
             trigger: ".hero",
             start: "top 85%",
-            toggleActions: "play none none reverse"
+            toggleActions: "play none none none"
         }
     })
         .from(".hero-subtitle", { opacity: 0, y: 20, duration: 0.8 })
@@ -69,7 +69,7 @@ const initAnimation = () => {
         scrollTrigger: {
             trigger: ".footer-hero",
             start: "top 50%",
-            toggleActions: "play none none reverse"
+            toggleActions: "play none none none"
         }
     })
     .from(".footer-signature", {
@@ -104,7 +104,7 @@ const initAnimation = () => {
                 scrollTrigger: {
                     trigger: img,
                     start: "top 90%",
-                    toggleActions: "play none none reverse"
+                    toggleActions: "play none none none"
                 }
             }
         );
