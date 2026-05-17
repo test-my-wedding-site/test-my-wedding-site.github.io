@@ -59,7 +59,8 @@ document.addEventListener("DOMContentLoaded", async () => {
             y: 20,
             stagger: 0.1,
             duration: 0.3
-        }, "-=0.3");
+        }, "-=0.3")
+        .from(".countdown-finished", { opacity: 0, y: 20, duration: 0.8 }, "-=0.4");
 
 
     // Footer Animation

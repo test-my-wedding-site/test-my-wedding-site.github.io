@@ -35,6 +35,10 @@
    overflow-x: hidden;
  }
 
+ body.hidden {
+  display: none;
+ }
+
  h1,
  h2,
  h3 {

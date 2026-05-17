@@ -18,4 +18,6 @@ document.addEventListener("DOMContentLoaded", async () => {
   /* Load social media hashtags */
   setSocialHashtag("Philippines");
 
+  /* Reveal Contents */
+  document.body.classList.remove("hidden");
 });
