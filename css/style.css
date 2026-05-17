@@ -111,6 +111,39 @@
    color: var(--deep-blue);
  }
 
+ #home {
+   scroll-margin-top: 50px;
+ }
+
+ #story,
+ #details,
+ #schedule,
+ #rsvp,
+ #faq,
+ #gallery,
+ #spotify,
+ #entourage {
+   scroll-margin-top: 60px;
+ }
+
+ @media (max-width:575.98px) {
+
+   #home {
+     scroll-margin-top: 40px;
+   }
+
+   #story,
+   #details,
+   #schedule,
+   #rsvp,
+   #faq,
+   #gallery,
+   #spotify,
+   #entourage {
+     scroll-margin-top: 50px;
+   }
+ }
+
  /* Animation Base CSS */
  .reveal {
    opacity: 0;
@@ -202,10 +235,6 @@
  }
 
  /* HOME SECTION */
- #home {
-   scroll-margin-top: 50px;
- }
-
  .hero {
    position: relative;
    min-height: 100vh;
@@ -452,10 +481,6 @@
  @media (max-width: 575.98px) {
    .hero h1 {
      font-size: 2.5rem;
-   }
-
-   #home {
-     scroll-margin-top: 40px;
    }
 
    .time-box {
