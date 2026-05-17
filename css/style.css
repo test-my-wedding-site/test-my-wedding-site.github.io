@@ -115,7 +115,7 @@
    scroll-margin-top: 50px;
  }
 
- #story,
+ /* #story,
  #details,
  #schedule,
  #rsvp,
@@ -124,7 +124,7 @@
  #spotify,
  #entourage {
    scroll-margin-top: 100px;
- }
+ } */
 
  @media (max-width:575.98px) {
 
@@ -132,7 +132,7 @@
      scroll-margin-top: 40px;
    }
 
-   #story,
+   /* #story,
    #details,
    #schedule,
    #rsvp,
@@ -141,7 +141,7 @@
    #spotify,
    #entourage {
      scroll-margin-top: 90px;
-   }
+   } */
  }
 
  /* Animation Base CSS */
@@ -248,7 +248,7 @@
    background:
      linear-gradient(rgba(10, 98, 143, 0.45),
        rgba(10, 98, 143, 0.45)),
-     url("https://images.unsplash.com/photo-1511285560929-80b456fea0bc?q=80&w=1600&auto=format&fit=crop");
+     url("../images/main_hero.jpg");
    background-size: cover;
    background-position: center;
  }
@@ -1379,7 +1379,7 @@
    text-align: center;
    background:
      linear-gradient(rgba(10, 98, 143, 0.55), rgba(10, 98, 143, 0.55)),
-     url("https://images.unsplash.com/photo-1523438885200-e635ba2c371e?q=80&w=1600&auto=format&fit=crop");
+     url("../images/footer_hero.jpg");
    background-size: cover;
    background-position: center;
  }
