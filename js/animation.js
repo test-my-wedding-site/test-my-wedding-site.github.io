@@ -3,7 +3,7 @@ document.addEventListener("DOMContentLoaded", async () => {
     gsap.registerPlugin(ScrollTrigger);
 
     // GLOBAL REVEAL ANIMATION
-    gsap.utils.toArray(".section, .details-card, .faq-card, .entourage-card, .img-box, .reminder-box, .gallery-social, .details-intro, .map-toggle, .map-content, .timeline-item, .featured-card, .rsvp-box, .rsvp-note, .sponsor-item, .party-column, .group-heading, .entourage-card, .spotify-intro, .spotify-card, .story-wrapper")
+    gsap.utils.toArray(".section, .details-card, .faq-card, .entourage-card, .story-wrapper, .img-box, .reminder-box, .gallery-social, .details-intro, .map-toggle, .map-content, .timeline-item, .featured-card, .rsvp-box, .rsvp-note, .sponsor-item, .party-column, .group-heading, .entourage-card, .spotify-intro, .spotify-card, .story-wrapper")
         .forEach((el) => {
             gsap.fromTo(
                 el,
@@ -37,7 +37,8 @@ document.addEventListener("DOMContentLoaded", async () => {
             ease: "power2.out",
             scrollTrigger: {
                 trigger: title,
-                start: "top 80%"
+                start: "top 80%",
+                toggleActions: "play none none reverse"
             }
         });
     });
@@ -74,13 +75,13 @@ document.addEventListener("DOMContentLoaded", async () => {
     .from(".footer-signature", {
         opacity: 0,
         y: 40,
-        duration: 1,
+        duration: 0.8,
         ease: "power3.out"
     })
     .from(".footer-names", {
         opacity: 0,
         y: 30,
-        duration: 1,
+        duration: 0.8,
         ease: "power3.out"
     }, "-=0.4")
     .from(".footer-date", {
@@ -102,7 +103,8 @@ document.addEventListener("DOMContentLoaded", async () => {
                 ease: "power2.out",
                 scrollTrigger: {
                     trigger: img,
-                    start: "top 90%"
+                    start: "top 90%",
+                    toggleActions: "play none none reverse"
                 }
             }
         );
