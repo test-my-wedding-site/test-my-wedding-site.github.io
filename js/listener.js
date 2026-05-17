@@ -1,5 +1,19 @@
+ /* Always start on top*/
+if("scrollRestoration" in history) {
+  history.scrollRestoration = "manual";
+}
+
+window.addEventListener("beforeunload", () => {
+  window.scrollTo(0, 0);
+});
+
+window.addEventListener("load", () => {
+  window.scrollTo(0, 0);
+});
+
+
 /* Run on DOMContentLoaded*/
-document.addEventListener("DOMContentLoaded", async() => {
+document.addEventListener("DOMContentLoaded", async () => {
 
   /* MOBILE MENU */
   const toggle = document.getElementById("menu-toggle");
@@ -10,24 +24,39 @@ document.addEventListener("DOMContentLoaded", async() => {
     toggle.setAttribute("aria-expanded", String(isExpanded));
   });
 
-  /* CLOSE MENU ON LINK CLICK */
+  /* Navigation Listener */
   document.querySelectorAll(".nav-links a").forEach(link => {
-    link.addEventListener("click", () => {
+    link.addEventListener("click", (event) => {
+
+      event.preventDefault();
+
+      //close menu
       nav.classList.remove("active");
       toggle.setAttribute("aria-expanded", "false");
+
+      //natigate to the page section
+      const targetId = link.getAttribute('href');
+      const target = document.querySelector(targetId);
+      if (!target) return;
+
+      target.scrollIntoView({
+        behavior: 'smooth',
+        block: 'start'
+      });
+
     });
   });
 
-  
-    /* NAVBAR SCROLL EFFECT */
+
+  /* NAVBAR SCROLL EFFECT */
   window.addEventListener("scroll", () => {
 
     const navbar = document.querySelector(".navbar");
 
-    if(window.scrollY > 50){
+    if (window.scrollY > 50) {
       navbar.style.background = "rgba(247,248,246,0.96)";
       navbar.style.boxShadow = "0 4px 20px rgba(0,0,0,0.05)";
-    }else {
+    } else {
       navbar.style.background = "rgba(247,248,246,0.90)";
       navbar.style.boxShadow = "none";
     }
@@ -53,9 +82,9 @@ document.addEventListener("DOMContentLoaded", async() => {
       ceremonyMap.classList.remove("active-map");
       receptionMap.classList.remove("active-map");
 
-      if(type === "ceremony") {
+      if (type === "ceremony") {
         ceremonyMap.classList.add("active-map");
-      } 
+      }
       else {
         receptionMap.classList.add("active-map");
       }
