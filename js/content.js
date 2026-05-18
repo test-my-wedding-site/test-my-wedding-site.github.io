@@ -253,7 +253,7 @@ const setWeddingDate = (weddingDate) => {
 document.addEventListener("DOMContentLoaded", async () => {
   const weddingData = await getWeddingData();
   // image cache version
-  // recacheImages("51820261");
+  recacheImages("51820261");
 
   setWeddingCouple(weddingData.groom, weddingData.bride);
   setCeremonyOfficial(weddingData.officiant);
