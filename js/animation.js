@@ -69,7 +69,7 @@ const initAnimation = () => {
     gsap.timeline({
         scrollTrigger: {
             trigger: ".footer-hero",
-            start: "top 50%",
+            start: "top 60%",
             toggleActions: "play none none reverse"
         }
     })
@@ -104,7 +104,7 @@ const initAnimation = () => {
                 ease: "power2.out",
                 scrollTrigger: {
                     trigger: img,
-                    start: "top 90%",
+                    start: "top 85%",
                     toggleActions: "play none none reverse",
                 }
             }
