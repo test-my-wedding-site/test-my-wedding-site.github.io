@@ -20,7 +20,7 @@ const initAnimation = () => {
                     ease: "power3.out",
                     scrollTrigger: {
                         trigger: el,
-                        start: "top 80%",
+                        start: "top 85%",
                         toggleActions: "play none none reverse"
                     }
                 }
@@ -37,7 +37,7 @@ const initAnimation = () => {
             ease: "power2.out",
             scrollTrigger: {
                 trigger: title,
-                start: "top 80%",
+                start: "top 85%",
                 toggleActions: "play none none reverse"
             }
         });

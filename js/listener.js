@@ -11,13 +11,14 @@ document.addEventListener("DOMContentLoaded", async () => {
   });
 
   const pageSections = document.querySelectorAll('.section[id]');
-
   const updateNoMarginScroll = () => {
     const currentScroll = window.scrollY;
 
     pageSections.forEach(section => {
       const sectionTop = section.offsetTop;
-      if (currentScroll > sectionTop) {
+
+      // no-margin-scroll on section pass the current scroll
+      if(currentScroll > sectionTop) {
         section.classList.add('no-margin-scroll');
       } else {
         section.classList.remove('no-margin-scroll');

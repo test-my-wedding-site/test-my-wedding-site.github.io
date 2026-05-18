@@ -486,6 +486,11 @@
  }
 
  @media (max-width: 575.98px) {
+
+    .countdown .time-box:nth-last-child(1) {
+      display: none;
+    }
+
    .hero h1 {
      font-size: 2.5rem;
    }
