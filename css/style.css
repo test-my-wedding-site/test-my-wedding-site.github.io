@@ -371,9 +371,6 @@
  }
 
  @media (max-width: 575.98px) {
-    .hero {
-      align-items: start;
-    }
 
    .countdown-finished {
      padding: 12px 18px;
