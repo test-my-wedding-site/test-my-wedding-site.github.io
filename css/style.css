@@ -115,12 +115,12 @@
    scroll-margin-top: 80px;
  }
 
- @media (max-width:575.98px) {
+ /* @media (max-width:575.98px) {
 
    #home {
      scroll-margin-top: 0px;
    }
- }
+ } */
 
  .no-margin-scroll {
    scroll-margin-top: 0px !important;
