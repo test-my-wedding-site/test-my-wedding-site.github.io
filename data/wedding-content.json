@@ -1,8 +1,8 @@
 {
-  "bride": "May",
-  "groom": "June",
-  "officiant": "Fr. Michael R. Santos",
-  "hashtag": "#MayAndJune2026",
+  "bride": "Hermione",
+  "groom": "Harry",
+  "officiant": "Prof. Albus Dumbledore",
+  "hashtag": "#HarryAndHermioneForever",
   "weddingDate": "07/14/2026",
   "rsvpDeadline": "07/10/2026",
 
@@ -11,133 +11,133 @@
 
   "family": {
     "bride": {
-      "father": "Mr. Antonio C. Cruz",
-      "mother": "Mrs. Elena C. Cruz"
+      "father": "Arthur Weasley",
+      "mother": "Molly Weasley"
     },
     "groom": {
-      "father": "Mr. Roberto B. Delgado",
-      "mother": "Mrs. Maria L. Delgado"
+      "father": "Tony Stark",
+      "mother": "Pepper Potts"
     }
   },
 
   "venue": [
     {
       "type": "ceremony",
-      "name": "St. Mary Church",
+      "name": "Hogwarts Great Hall",
       "date": "June 21, 2026",
       "time": "2:00 PM",
-      "address": "123 Church Street, City Name",
+      "address": "Hogwarts School of Witchcraft and Wizardry",
       "map": "https://www.google.com/maps?q=6.116338,125.171833"
     },
     {
       "type": "reception",
-      "name": "Sunset Garden Hall",
+      "name": "Black Pearl Grand Deck",
       "date": "June 21, 2026",
       "time": "6:00 PM",
-      "address": "Sunset Avenue, City Name",
+      "address": "Caribbean Seas, Port Royal",
       "map": "https://www.google.com/maps?q=6.116117402370895,125.18710124287222"
     }
   ],
 
   "schedule": [
     {
-      "title": "Ceremony",
+      "title": "Wizarding Ceremony",
       "time": "2:00 PM",
-      "details": "A meaningful ceremony surrounded by our closest family and friends."
+      "details": "A magical union witnessed by witches, wizards, pirates, and heroes."
     },
     {
-      "title": "Cocktail Hour",
+      "title": "Butterbeer Cocktail Hour",
       "time": "4:00 PM",
-      "details": "A relaxed gathering with drinks, light bites, and time to connect."
+      "details": "Enjoy enchanted drinks, pirate tales, and heroic stories."
     },
     {
-      "title": "Reception",
+      "title": "Reception Feast",
       "time": "6:00 PM",
-      "details": "An evening of dinner, heartfelt speeches, and joyful celebration."
+      "details": "Dinner, dancing, spells, and celebrations across the multiverse."
     }
   ],
 
   "faq": [
     {
       "question": "What should I wear?",
-      "answer": "Dress code is semi-formal: polished, elegant, and comfortable."
+      "answer": "Formal robes, pirate coats, or superhero suits are welcome."
     },
     {
       "question": "Can I bring a plus one?",
-      "answer": "Please bring the guest named on your invitation."
+      "answer": "Only if they possess a Hogwarts invitation."
     },
     {
       "question": "Is parking available?",
-      "answer": "Yes, parking is available at both venues."
+      "answer": "Yes, for broomsticks, Quinjets, and pirate ships."
     },
     {
       "question": "Will food be served?",
-      "answer": "Yes, a full dinner and refreshments will be provided."
+      "answer": "Yes, including Butterbeer, shawarma, and Caribbean delicacies."
     },
     {
       "question": "Can I take photos?",
-      "answer": "Please feel free to capture moments with care and respect."
+      "answer": "Yes, but no flash magic during spellcasting."
     },
     {
       "question": "What time should I arrive?",
-      "answer": "Please arrive 30 minutes early so we can begin together."
+      "answer": "Please arrive 30 minutes before the Floo Network opens."
     }
   ],
 
   "sponsors": {
     "principal": [
-      "Mr. Daniel A. Reyes",
-      "Ms. Sophia B. Martinez",
-      "Mr. Ethan A. Walker",
-      "Mrs. Isabella A. Cruz",
-      "Mr. Noah B. Bennett",
-      "Ms. Charlotte F. Flores",
-      "Mr. Liam A. Foster",
-      "Mrs. Amelia A. Garcia",
-      "Mr. Benjamin A. Hayes",
-      "Ms. Mia A. Collins",
-      "Mr. Lucas A. Brooks",
-      "Mrs. Evelyn A. Turner"
+      "Jack Sparrow",
+      "Will Turner",
+      "Elizabeth Swann",
+      "Thor Odinson",
+      "Loki Laufeyson",
+      "Natasha Romanoff",
+      "Steve Rogers",
+      "Bruce Banner",
+      "Wanda Maximoff",
+      "Peter Parker",
+      "Doctor Strange",
+      "Gamora"
     ],
 
     "ceremony": [
       {
         "role": "Candle",
         "people": [
-          "Mr. Adrian A. Mendoza", 
-          "Ms. Claire A. Mendoza"
+          "Anna",
+          "Elsa"
         ]
       },
       {
         "role": "Cord",
         "people": [
-          "Mr. Vincent A. Ramirez", 
-          "Mrs. Sophia A. Ramirez"
+          "Shrek",
+          "Princess Fiona"
         ]
       },
       {
         "role": "Veil",
         "people": [
-          "Mr. Julian A. Navarro", 
-          "Ms. Bianca A. Navarro"
+          "Mickey Mouse",
+          "Minnie Mouse"
         ]
       },
       {
         "role": "Ring Bearer",
         "people": [
-          "Master Liam A. Torres"
+          "Grogu"
         ]
       },
       {
         "role": "Bible Bearer",
         "people": [
-          "Master Noah A. Castillo"
+          "Luke Skywalker"
         ]
       },
       {
         "role": "Coin Bearer",
         "people": [
-          "Master Ethan A. Flores"
+          "Scrooge McDuck"
         ]
       }
     ]
@@ -146,18 +146,18 @@
   "party": [
     {
       "type": "best-man",
-      "main": "Mr. Nathan A. Delgado",
+      "main": "Ron Weasley",
       "members": [
-        "Mr. Caleb A. Navarro",
-        "Mr. Vincent A. Morales"
+        "Hagrid",
+        "Neville Longbottom"
       ]
     },
     {
       "type": "maid-of-honor",
-      "main": "Ms. Bianca A. Fernandez",
+      "main": "Luna Lovegood",
       "members": [
-        "Ms. Ariana A. Villanueva",
-        "Ms. Chloe A. Ramirez"
+        "Ginny Weasley",
+        "Cho Chang"
       ]
     }
   ]
