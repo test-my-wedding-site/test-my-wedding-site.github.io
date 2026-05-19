@@ -5,7 +5,8 @@ const getWeddingData = async () => {
     const data = await response.json();
 
     return data;
-  } catch (error) {
+  } 
+  catch (error) {
     console.error("Failed to load JSON:", error);
   }
 };
