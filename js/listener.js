@@ -11,7 +11,7 @@ document.addEventListener("DOMContentLoaded", async() => {
   });
 
   /* Navigation Listener */
-  document.querySelectorAll(".nav-links a").forEach(link => {
+  document.querySelectorAll(".nav-links a, .floating-rsvp").forEach(link => {
     link.addEventListener("click", (event) => {
 
       event.preventDefault();
@@ -68,12 +68,10 @@ document.addEventListener("DOMContentLoaded", async() => {
       ceremonyMap.classList.remove("active-map");
       receptionMap.classList.remove("active-map");
 
-      if (type === "ceremony") {
-        ceremonyMap.classList.add("active-map");
-      }
-      else {
+      (type === "ceremony") ?
+        ceremonyMap.classList.add("active-map") :
         receptionMap.classList.add("active-map");
-      }
+
 
     });
   });

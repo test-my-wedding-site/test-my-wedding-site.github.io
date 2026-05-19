@@ -13,7 +13,7 @@ const getWeddingData = async () => {
 /* Utility for updating page elements */
 const setContentData = (target, attrib, data) => {
   document.querySelectorAll(`[data-content="${target}"]`).forEach(element => {
-    if (attrib === "innerHTML" || attrib === "textContent" || attrib === "value") {
+    if(attrib === "innerHTML" || attrib === "textContent" || attrib === "value") {
       element[attrib] = data;
       return;
     }

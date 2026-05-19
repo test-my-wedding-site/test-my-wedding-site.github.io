@@ -4,9 +4,9 @@ const initAnimation = () => {
 
     // GLOBAL REVEAL ANIMATION
     gsap.utils.toArray(".story-image, .story-text, .details-intro, .details-card, .map-toggle, .map-content, .timeline-item, .rsvp-note, .rsvp-box, .faq-card, .reminder-image, .reminder-content, .img-box, .gallery-social-image, .gallery-social-content, .spotify-intro, .spotify-card, .group-heading, .featured-card, .entourage-card, .sponsor-item, .party-column")
-        .forEach((el) => {
+        .forEach((element) => {
             gsap.fromTo(
-                el,
+                element,
                 {
                     opacity: 0,
                     y: 60,
