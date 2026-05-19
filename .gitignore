@@ -1,1 +1,5 @@
-!data/wedding-content.json
+#ignore all data files
+data/*
+
+#Allow json file
+!data/*.json
