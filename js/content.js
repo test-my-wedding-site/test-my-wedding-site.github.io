@@ -4,6 +4,7 @@ const getWeddingData = async () => {
     const response = await fetch("data/wedding-content.json?v=0");
     const data = await response.json();
 
+    console.log(data);
     return data;
   } 
   catch (error) {
@@ -84,11 +85,11 @@ const setPrincipalSponsor = (principalSponsorData) => {
 
 /* Set wedding party roles and attendants */
 const setWeddingParty = (weddingPartyData) => {
-  Object.keys(weddingPartyData).forEach(key => {
-    setContentData(`${key}-main`, "innerHTML", weddingPartyData[key].main);
+  weddingPartyData.forEach(party => {
+    setContentData(`${party.type}-main`, "innerHTML", party.main);
 
-    const container = document.querySelector(`[data-content="${key}-attendant"]`);
-    weddingPartyData[key].members.forEach(attendant => {
+    const container = document.querySelector(`[data-content="${party.type}-attendant"]`);
+    party.members.forEach(attendant => {
       const div = document.createElement("div");
       div.className = "party-item";
       div.innerHTML = attendant;

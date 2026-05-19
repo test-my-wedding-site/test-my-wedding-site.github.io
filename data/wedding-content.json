@@ -103,47 +103,62 @@
     "ceremony": [
       {
         "role": "Candle",
-        "people": ["Mr. Adrian A. Mendoza", "Ms. Claire A. Mendoza"]
+        "people": [
+          "Mr. Adrian A. Mendoza", 
+          "Ms. Claire A. Mendoza"
+        ]
       },
       {
         "role": "Cord",
-        "people": ["Mr. Vincent A. Ramirez", "Mrs. Sophia A. Ramirez"]
+        "people": [
+          "Mr. Vincent A. Ramirez", 
+          "Mrs. Sophia A. Ramirez"
+        ]
       },
       {
         "role": "Veil",
-        "people": ["Mr. Julian A. Navarro", "Ms. Bianca A. Navarro"]
+        "people": [
+          "Mr. Julian A. Navarro", 
+          "Ms. Bianca A. Navarro"
+        ]
       },
       {
         "role": "Ring Bearer",
-        "people": ["Master Liam A. Torres"]
+        "people": [
+          "Master Liam A. Torres"
+        ]
       },
       {
         "role": "Bible Bearer",
-        "people": ["Master Noah A. Castillo"]
+        "people": [
+          "Master Noah A. Castillo"
+        ]
       },
       {
         "role": "Coin Bearer",
-        "people": ["Master Ethan A. Flores"]
+        "people": [
+          "Master Ethan A. Flores"
+        ]
       }
     ]
   },
 
-  "party": {
-    "best-man": {
+  "party": [
+    {
+      "type": "best-man",
       "main": "Mr. Nathan A. Delgado",
       "members": [
         "Mr. Caleb A. Navarro",
-        "Mr. Vincent A. Morales",
-        "Mr. Julian A. Castillo"
+        "Mr. Vincent A. Morales"
       ]
     },
-    "maid-of-honor": {
+    {
+      "type": "maid-of-honor",
       "main": "Ms. Bianca A. Fernandez",
       "members": [
         "Ms. Ariana A. Villanueva",
-        "Ms. Chloe A. Ramirez",
-        "Ms. Samantha A. Ortega"
+        "Ms. Chloe A. Ramirez"
       ]
     }
-  }
+  ]
 }
