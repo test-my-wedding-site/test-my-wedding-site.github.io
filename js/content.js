@@ -1,7 +1,7 @@
 ﻿/* Load wedding content from JSON */
 const getWeddingData = async () => {
   try {
-    const response = await fetch("data/wedding-content.json?v=0");
+    const response = await fetch("data/wedding-content.json?v=1");
     const data = await response.json();
 
     console.log(data);
