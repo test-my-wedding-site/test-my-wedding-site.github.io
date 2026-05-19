@@ -49,6 +49,25 @@ document.addEventListener("DOMContentLoaded", async() => {
 
   });
 
+  /* Prever Iframe autofocus scroll */
+  const observer = new IntersectionObserver((entries) => {
+    entries.forEach(entry => {
+      const iframe = entry.target.querySelector("iframe");
+
+      if(!iframe) return;
+
+      (entry.isIntersecting) ?
+        iframe.style.display = "block" :
+        iframe.style.display = "none";
+    });
+  }, {
+    root: null,
+    threshold: 0.2, // adjust sensitivity (20% displayed before trigger)
+    rootMargin: "200px 0px" // preload before visible
+  });
+  document.querySelectorAll(".iframe-limit")
+    .forEach(element => observer.observe(element));
+
 
   /* MAP Event Listener */
   const buttons = document.querySelectorAll(".map-btn");

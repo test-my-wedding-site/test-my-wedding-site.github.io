@@ -231,8 +231,10 @@ const setSocialHashtag = (hashtag) => {
 
 /* Set Spotify playlist embed */
 const setSpotifyPlaylist = (playlist) => {
+  const playlistId = playlist.split("/playlist")[1];
+
   setContentData("spotify-playlist-link", "href", playlist);
-  setContentData("spotify-playlist", "src", playlist);
+  setContentData("spotify-playlist", "src", `https://open.spotify.com/embed/playlist/${playlistId}`);
 };
 
 /* Set wedding date in hero and footer */
