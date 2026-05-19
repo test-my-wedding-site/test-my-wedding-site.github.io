@@ -1,7 +1,13 @@
-﻿/* Load wedding content from JSON */
+﻿/* Global version of content data for cache */
+const getContentVersion = () => {
+  const version = "1.0.0";
+  return version;
+}
+
+/* Load wedding content from JSON */
 const getWeddingData = async () => {
   try {
-    const response = await fetch("data/wedding-content.json?v=1");
+    const response = await fetch(`data/wedding-content.json?v=${getContentVersion()}`);
     const data = await response.json();
 
     console.log(data);
@@ -200,10 +206,11 @@ const setFAQ = (faqData) => {
 /* Set gallery images */
 const loadGalleryImages = async(maxImages) => {
   const container = document.querySelector('[data-content="gallery-container"]');
+  const contentVersion = getContentVersion();
   const promises = [];
 
   for (let i = 1; i <= maxImages; i++) {
-    const src = `images/gallery/photo_${i}.jpg`;
+    const src = `images/gallery/photo_${i}.jpg?v=${contentVersion}`;
     promises.push(preloadImage(src));
   }
 
@@ -261,7 +268,7 @@ document.addEventListener("DOMContentLoaded", async () => {
   runWeddingTimer(weddingData.weddingDate);
 
   // image cache version
-  recacheImages("51920261");
+  recacheImages(getContentVersion());
 
   setWeddingCouple(weddingData.groom, weddingData.bride);
   setCeremonyOfficial(weddingData.officiant);
