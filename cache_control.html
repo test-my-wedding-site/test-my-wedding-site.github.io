@@ -3,12 +3,12 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Loader...</title>
+    <title>Cache...</title>
 </head>
 <body>
     <script type="text/javascript">
-        const timestamp = Date.now();
-        fetch(`/cache_control.html?v=${timestamp}`, {cache: "no-store"})
+        const version = "1.0.0";
+        fetch(`/content.html?v=${version}`)
         .then(response => response.text())
         .then(html => {
             document.open();
