@@ -4,7 +4,7 @@ const CONTENT_VERSION = "1.0.1";
 /* Load wedding content from JSON */
 const getWeddingData = async () => {
   try {
-    const response = await fetch(`data/wedding-content.json?v=${CONTENT_VERSION}`);
+    const response = await fetch(`data/wedding-content.min.json?v=${CONTENT_VERSION}`);
     const data = await response.json();
 
     return data;

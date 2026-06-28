@@ -5,6 +5,10 @@
   "emeraldwalk.runonsave": {
     "commands": [
       {
+        "match": "wedding-content\\.json$",
+        "cmd": "json-minify \"${file}\" > \"${fileDirname}\\wedding-content.min.json\""
+      },
+      {
         "match": "animation\\.js$",
         "cmd": "terser \"${file}\" -o \"${fileDirname}\\animation.min.js\" -c -m"
       },
