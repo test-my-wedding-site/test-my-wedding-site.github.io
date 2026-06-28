@@ -1396,6 +1396,10 @@
 
  @media (max-width: 575.98px) {
 
+  .sponsors-list> :last-child:nth-child(odd) {
+    width: 100%;
+  }
+
    .faq-grid,
    .couple-grid,
    .party-grid,
