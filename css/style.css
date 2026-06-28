@@ -231,6 +231,12 @@
    cursor: pointer;
  }
 
+   @media (max-width: 575.98px) {
+    .logo {
+      font-size: 1.3rem;
+    }
+   }
+
  /* HOME SECTION */
  .hero {
    position: relative;
@@ -338,14 +344,6 @@
    justify-content: center;
 
    border-radius: 50%;
-
-   /* background:
-     linear-gradient(135deg,
-       var(--soft-blue),
-       var(--deep-blue)); */
-
-   /* box-shadow:
-     0 8px 20px rgba(10, 98, 143, 0.28); */
  }
 
  .finished-divider {
@@ -915,7 +913,6 @@
  @media (max-width: 767.98px) {
 
    .section-title h2,
-   .gallery-social-content h3,
    .reminder-content h3,
    .rsvp-note h3 {
      font-size: 2.2rem;
@@ -1056,6 +1053,13 @@
    }
  }
 
+  @media (max-width: 575.98px) {
+
+   .gallery-social-content h3 {
+     font-size: 2.2rem;
+   }
+ }
+
  /* SPOTIFY SECTION */
  .spotify-section {
    background: linear-gradient(to bottom, #eef7fb, #f7f8f6);
@@ -1172,6 +1176,10 @@
  }
 
  @media (max-width: 575.98px) {
+  .spotify-info h3 span {
+    font-size: 1.3rem;
+  }
+
    .spotify-card {
      padding: 20px;
    }
