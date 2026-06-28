@@ -383,23 +383,6 @@
    line-height: 1.1;
  }
 
- @media (max-width: 575.98px) {
-
-   .countdown-finished {
-     padding: 12px 18px;
-     gap: 14px;
-   }
-
-   .finished-ring {
-     width: 46px;
-     height: 46px;
-   }
-
-   .finished-text h2 {
-     font-size: 1.35rem;
-   }
- }
-
  .time-box {
    min-width: 100px;
    padding: 20px;
@@ -466,6 +449,12 @@
    }
  }
 
+ @media (max-width: 992px) {
+    .hero {
+      background-position: center;
+   }
+}
+
  @media (max-width: 767.98px) {
    .hero h1 {
      font-size: 3.3rem;
@@ -473,6 +462,20 @@
  }
 
  @media (max-width: 575.98px) {
+
+   .countdown-finished {
+     padding: 12px 18px;
+     gap: 14px;
+   }
+
+   .finished-ring {
+     width: 46px;
+     height: 46px;
+   }
+
+   .finished-text h2 {
+     font-size: 1.35rem;
+   }
 
    .countdown .time-box:nth-last-child(1) {
      display: none;
@@ -497,6 +500,12 @@
 
    .time-box span {
      font-size: 1.5rem;
+   }
+ }
+
+ @media (max-width: 479.98px){
+     .hero {
+     background-position: center, calc(50% - 140px) center;
    }
  }
 
