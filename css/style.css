@@ -1309,6 +1309,12 @@
    gap: 20px;
  }
 
+ .sponsors-list > :last-child:nth-child(odd) {
+  grid-column: 1 / -1;
+  justify-self: center;
+  width: 50%;
+}
+
  .sponsor-item {
    padding: 24px 28px;
    border-radius: 22px;
