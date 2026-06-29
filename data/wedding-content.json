@@ -4,10 +4,10 @@
   "officiant": "TBA",
   "hashtag": "#ShakenNotSeparated",
   "weddingDate": "07/04/2026",
-  "rsvpDeadline": "07/02/2026",
+  "rsvpDeadline": "07/03/2026",
 
   "spotifyUrl": "https://open.spotify.com/playlist/54ZA9LXFvvFujmOVWXpHga",
-  "rsvpFormUrl": "https://docs.google.com/forms/d/e/1FAIpQLSddunQoLP03Ui82aRpaxcbs5qL3nsDoKH2Y2cCFVmnOR7QxIQ/viewform?usp=dialog",
+  "rsvpFormUrl": "https://docs.google.com/forms/d/e/1FAIpQLSfI0OQV1gzJa34i5TdMkvEgcTVchAdRqGFoqgona8wLXZZfLQ/viewform?usp=header",
 
   "family": {
     "bride": {
@@ -25,7 +25,7 @@
       "type": "ceremony",
       "name": "Palmera Garden Hotel",
       "date": "July 04, 2026",
-      "time": "1:00 PM",
+      "time": "2:00 PM",
       "address": "Aparente Street corner Sebastian, General Santos City",
       "map": "https://www.google.com/maps?q=6.1304633442595104,125.17132262464766"
     },
@@ -33,7 +33,7 @@
       "type": "reception",
       "name": "Palmera Garden Hotel",
       "date": "July 04, 2026",
-      "time": "2:00 PM",
+      "time": "4:00 PM",
       "address": "Aparente Street corner Sebastian, General Santos City",
       "map": "https://www.google.com/maps?q=6.1304633442595104,125.17132262464766"
     }
@@ -42,17 +42,17 @@
   "schedule": [
     {
       "title": "Wedding Ceremony",
-      "time": "TBA",
+      "time": "2:00 PM",
       "details": "Witness our heartfelt exchange of vows as we begin our forever together."
     },
     {
       "title": "Cocktail Hour",
-      "time": "TBA",
+      "time": "3:00 PM",
       "details": "Enjoy drinks, light bites, and great company while the newlyweds capture special moments."
     },
     {
       "title": "Wedding Reception",
-      "time": "2:00 PM",
+      "time": "4:00 PM",
       "details": "Join us for dinner, drinks, dancing, and a joyful celebration of our new beginning."
     }
   ],
