@@ -1015,6 +1015,7 @@
    padding: 16px 24px;
    border-radius: 50px;
    background: rgba(22, 148, 207, 0.08);
+   text-decoration: none;
    color: var(--deep-blue);
    font-weight: 700;
    font-size: 1rem;
