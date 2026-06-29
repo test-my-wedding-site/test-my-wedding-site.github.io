@@ -1,5 +1,5 @@
-const ASSETS_VERSION = "1.0.0";
-const HTML_VERSION = "1.0.0";
+const ASSETS_VERSION = "1.1.0";
+const HTML_VERSION = "1.1.0";
 
 const loadAssets = ({ rel, href, type }) => {
     return new Promise((resolve, reject) => {
