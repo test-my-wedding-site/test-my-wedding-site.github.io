@@ -841,7 +841,7 @@
 
  /* FAQ + REMINDER SECTION */
  .faq-section {
-   background: #eef7fb;
+    background: linear-gradient(to bottom, #edf6fa, #f7f8f6);
  }
 
  .faq-grid {
@@ -924,7 +924,7 @@
 
  /* GALLERY SECTION */
  .gallery-section {
-   background: #eef7fb;
+    background: linear-gradient(to bottom, #eef7fb, #f7f8f6);
  }
 
  .gallery {
