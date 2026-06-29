@@ -99,6 +99,11 @@ const setPrincipalSponsor = (principalSponsorData) => {
 /* Set wedding party roles and attendants */
 const setWeddingParty = (weddingPartyData) => {
   weddingPartyData.forEach(party => {
+    if(party.main.length === 0){
+      document.getElementById("weddingParty").classList.add("hidden");
+      return;
+    }
+
     setContentData(`${party.type}-main`, "innerHTML", party.main);
 
     const container = document.querySelector(`[data-content="${party.type}-attendant"]`);
