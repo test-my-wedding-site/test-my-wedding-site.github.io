@@ -275,19 +275,25 @@
  .hero h2 {
    color: white;
    font-size: 1.2rem;
-   margin-bottom: 15px;
+   margin-bottom: 5px;
  }
 
  .hero h1 {
    color: white;
    font-size: 5.2rem;
    line-height: 1.1;
-   margin-bottom: 20px;
+   margin-bottom: 5px;
+ }
+
+ .hero .hero-weds {
+   font-family: "Great Vibes", cursive;
+   font-size: 1.8rem;
+   margin-bottom: 5px;
  }
 
  .hero-date {
    font-size: 1.2rem;
-   margin-bottom: 35px;
+   margin-bottom: 20px;
  }
 
  .hero-info-strip {

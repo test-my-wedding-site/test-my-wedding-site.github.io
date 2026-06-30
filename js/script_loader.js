@@ -3,7 +3,7 @@ const SCRIPT_BUILD_VERSION = "6.30.26" //reache all
 //scripts version
 const ANIMATION_VERSION = "2.6.0";
 const SCRIPT_VERSION = "2.6.0";
-const LISTENER_VERSION = "2.6.0";
+const LISTENER_VERSION = "2.7.0";
 const DATA_VERSION = "2.8.0";
 
 const scripts = [

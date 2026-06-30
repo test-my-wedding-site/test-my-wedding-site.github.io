@@ -3,11 +3,11 @@ const CONTENT_BUILD_VERSION = "6.30.26" //reache all
 //Assets
 const ICON_VERSION = "1.3.0";
 const FONT_VERSION = "1.3.0";
-const STYLE_VERSION = "1.3.0";
+const STYLE_VERSION = "1.4.0";
 
 //HTML Fragments
 const HTML_HEADER_VERSION = "1.3.0";
-const HTML_MAIN_VERSION = "1.3.0";
+const HTML_MAIN_VERSION = "1.4.0";
 const HTML_FOOTER_VERSION = "1.3.0";
 
 const loadAssets = ({ rel, href, type }) => {

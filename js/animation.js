@@ -54,6 +54,7 @@ const initAnimation = () => {
         .from(".hero-subtitle", { opacity: 0, y: 20, duration: 0.8, ease: "power3.out" })
         .from(".hero h2", { opacity: 0, y: 20, duration: 0.8, ease: "power3.out" }, "-=0.4")
         .from(".hero h1", { opacity: 0, y: 40, duration: 1, ease: "power3.out" })
+        .from(".hero-weds", { opacity: 0, y: 20, duration:  0.8, ease: "power3.out" }, "-=0.5")
         .from(".hero-date", { opacity: 0, y: 20, duration: 0.8, ease: "power3.out" }, "-=0.5")
         .from(".countdown .time-box", {
             opacity: 0,
