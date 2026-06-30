@@ -272,16 +272,15 @@ const setWeddingDate = (weddingDate) => {
 const initContent = async () => {
   const weddingData = await getWeddingData();
 
-  // init hero and wedding countdown
-  reacacheBackgroundImages(CONTENT_VERSION);
-  setWeddingCouple(weddingData.groom, weddingData.bride);
+  // start wedding countdown
   runWeddingTimer(weddingData.weddingDate);
-  document.body.style.display = "block";
 
   // image cache version
+  reacacheBackgroundImages(CONTENT_VERSION);
   recacheImages(CONTENT_VERSION);
   loadGalleryImages(GALLERY_IMAGES);
 
+  setWeddingCouple(weddingData.groom, weddingData.bride);
   setCeremonyOfficial(weddingData.officiant);
   setWeddingFamily(weddingData.family);
   setPrincipalSponsor(weddingData.sponsors.principal);
@@ -299,6 +298,7 @@ const initContent = async () => {
   setSocialHashtag(weddingData.hashtag);
   setSpotifyPlaylist(weddingData.spotifyUrl);
 
+  document.body.style.display = "block";
   initAnimation();
 };
 
